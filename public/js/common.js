@@ -773,6 +773,7 @@ var main = (function ($) {
 	return _;
 })(jQuery);
 
+
 $(document).ready(function () {
 	$(document).scroll(function (e) {
 
@@ -798,7 +799,7 @@ $(document).ready(function () {
 	$(document).scroll(function (e) {
 		coord = $(".work").offset();
 
-		if (($(window).height() + $(window).scrollTop() >= coord.top * 1.25) && ($(window).scrollTop() - (coord.top * 1.25) < 0)) {
+		if (($(window).height() + $(window).scrollTop() >= coord.top * 1.25) && ($(window).scrollTop() - (coord.top * 1.7) < 0)) {
 			$('.work').addClass('animation');
 		} else {
 			$('.work').removeClass('animation')

@@ -10,8 +10,11 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use('/', express.static(path.join(__dirname, '../public')));
 
-//app.post('/api/add_photo', require('./controller/admin.js'));
-//app.get('/home', require('./controller/home.js'));
+app.post('/api/add_photo', require('./controller/admin.js'));
+app.get('/api/photos', require('./controller/admin.js'));
+app.delete('/api/delete_photo/:id', require('./controller/admin.js'));
+//app.get('/api/photos', require('./controller/galery.js'));
+app.get('/home/photos', require('./controller/home.js'));
 
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../public/index.html'));

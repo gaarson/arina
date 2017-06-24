@@ -1,11 +1,12 @@
 const express = require('express'),
       router = express.Router();
-      //Home = require('../model/home.js');
+      Home = require('../model/home.js');
 
-router.get('/home', (req, res) => {
-  //Home.homeData((data) => {
-    //res.send(data);
-  //})
+router.get('/home/photos', (req, res) => {
+  console.log('gethome');
+  Home.freshPhotos((data) => {
+    res.send(data);
+  })
 })
 
 module.exports = router;

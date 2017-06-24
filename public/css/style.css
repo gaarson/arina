@@ -765,12 +765,6 @@ textarea {
   position: relative;
   z-index: 2; }
 
-.svg-icon {
-  width: 20px;
-  height: 20px;
-  fill: #667a84;
-  position: relative; }
-
 .socials {
   display: inline-block; }
 
@@ -788,6 +782,10 @@ textarea {
   -webkit-transform: scale(1);
       -ms-transform: scale(1);
           transform: scale(1); }
+  .socials-itm i {
+    color: #667a84;
+    font-size: 20px;
+    position: relative; }
   .socials-itm:before {
     content: '';
     width: 100%;
@@ -809,8 +807,9 @@ textarea {
     -webkit-transform: scale(1.1);
         -ms-transform: scale(1.1);
             transform: scale(1.1); }
-  .socials-itm:hover .svg-icon {
-    fill: #39454b; }
+  .socials-itm:hover i {
+    color: #39454b;
+    z-index: 1; }
 
 .copy {
   float: right;

@@ -9,6 +9,8 @@ import sagas from './side-effects/sagas.js';
 import * as reducers from './reducers/reducer.js';
 
 import Home from './components/home/home.js';
+import Galery from './components/galery/galery.js';
+import Admin from './components/admin/admin.js';
 
 const sagaMiddleware = createSagaMiddleware();
 const store = createStore(combineReducers(reducers), applyMiddleware(sagaMiddleware));
@@ -18,7 +20,9 @@ render(
   <Provider store={store}>
     <Router>
       <div>
-        <Router exact path='/' component={Home} />
+        <Route exact path='/' component={Home} />
+        <Route path='/galery' component={Galery} />
+        <Route path='/admin' component={Admin} />
       </div>
     </Router>
   </Provider>,
